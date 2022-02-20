@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;900&display=swap');
+:root{
+    --textColor:#252525;
+    --white:"#ffffff";
+    --blue:#0f204b;
+    --yellow:#fcb117;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+    color:inherit; 
+    text-decoration:none; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background-color: var(--white);
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar{
+    padding: 25px;
+    z-index: 5;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 15%);
+    /* backdrop-filter: blur(5px); */
+    background-color: rgba(255,255,255,0.7);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link {
+    font-size: 16px;
+    color: var(--root);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--root);
+}
+.nav-link:hover{
+    color: initial;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.navButton{
+    border-radius: 20px;
+}
+
+.titleInfoBar{
+    background-color: var(--blue);
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+}
+
+.infoBarLabel {
+    color: var(--white);
+    max-width: 0;
+    -webkit-transition: max-width 0.7s;
+    transition: max-width 0.7s;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.infoBarItem{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    align-items: center;
+    /* padding: 2px 4px; */
+    border-radius: 10px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icon{
+    width: 20px;
+    height: auto;
+    margin: 0px 5px;
+    margin-right: 4px;
+    color: var(--yellow);
+}
+
+.infoBarItem:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+.infoBarItem:hover .infoBarLabel{
+    max-width: 9rem;
+}
+
+.carousel-inner{
+    height: 500px;
+}
+
+.carousel-item{
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.carousel-container{
+}
+
+.carousel-caption{
+    top:35%;
+}
+
+.carousel-caption-title{
+    color: var(--blue);
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.caption{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.caption button{
+    width: fit-content;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.CarouselIcon{
+    width: 20px;
+    margin: 0px 5px;
+    color: var(--textColor);
+}
+
+.bannerBG{
+    background-image: url(./assets/blueBG.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.bannerText{
+    flex-grow: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.contentContainer{
+    background-color: white;
+    padding: 80px 0px;
+}
+
+.content{
+    margin: 0px;
+}
+
+.expContainer{
+    text-align: center;
+}
+
+.subtitle{
+    font-size: 45px;
+    line-height: 60px;
+    color: var(--blue);
+}
+
+.imageCard{
+    height: 200px;
+}
+
+.imageCard img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.imageTile{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0; 
+    background: rgba(0,46,91,.9);
+    color: #f1f1f1; 
+    width: 100%;
+    height: 100%;
+    transition: .3s ease;
+    opacity:1;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    transform: translateY(128px);
+}
+
+.imageTile:hover .overlay {
+    transform: translateY(0px);
+}
+
+.imageTile:hover .overlayCaption{
+    display: block;
+}
+.image {
+    display: block;
+    height: 100%;
+    height: auto;
+}
+
+.overlayTitle{
+    color: white;
+    min-height: 50px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.overlayCaption{
+    flex-grow: 1;
+    color: var(--yellow);
 }
