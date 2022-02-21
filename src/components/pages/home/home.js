@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <div>
       <Carousel/>
+      <div className='container'>
       <div className="bannerBG">
             <div className="banner">
                 <h4 className="bannerText">A peer reviewed audit firm in Coimbatore with 43 years of experience</h4>
@@ -14,6 +15,7 @@ const Home = () => {
                 </button>
             </div>
         </div>
+      </div>
       <Content/>
     </div>
   )
