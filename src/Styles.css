@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 :root{
     --textColor:#252525;
-    --white:"#ffffff";
+    --white:#f2f2f2;
     --blue:#0f204b;
     --yellow:#fcb117;
+    --titleFont:'Montserrat', sans-serif;
 }
 
 a {
@@ -19,35 +22,6 @@ a:hover {
 body {
     background-color: var(--white);
     font-family: 'Source Sans Pro', sans-serif;
-}
-
-.navbar{
-    padding: 25px;
-    z-index: 5;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 15%);
-    /* backdrop-filter: blur(5px); */
-    background-color: rgba(255,255,255,0.7);
-}
-
-.nav-link {
-    font-size: 16px;
-    color: var(--root);
-}
-
-.navbar-brand {
-    font-size: 24px;
-    font-weight: 900;
-    color: var(--root);
-}
-.nav-link:hover{
-    color: initial;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-}
-
-.navButton{
-    border-radius: 20px;
 }
 
 .titleInfoBar{
@@ -151,25 +125,32 @@ body {
     padding: 20px;
     align-items: center;
     backdrop-filter: blur(5px);
+    justify-content: center;
+}
+
+.banner label{
+    font-family: var(--titleFont);
+    font-weight: 600;
 }
 
 .bannerText{
     flex-grow: 1;
     text-align: center;
     color: #fff;
+    font-size: 20px;
+    line-height: 24px;
 }
 
-.contentContainer{
-    background-color: white;
-    padding: 80px 0px;
+.buttonText{
+    font-family: var(--titleFont);
+    font-weight: bold;
 }
-
-.content{
-    margin: 0px;
-}
-
 .expContainer{
+    margin: 50px 0px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .subtitle{
@@ -179,7 +160,7 @@ body {
 }
 
 .imageCard{
-    height: 200px;
+    height: 300px;
 }
 
 .imageCard img{
@@ -187,54 +168,11 @@ body {
     object-fit: cover;
 }
 
-.imageTile{
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
 
-.overlay {
-    position: absolute; 
+.footer{
     display: flex;
-    flex-direction: column;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 50px;
     justify-content: center;
-    bottom: 0; 
-    background: rgba(0,46,91,.9);
-    color: #f1f1f1; 
-    width: 100%;
-    height: 100%;
-    transition: .3s ease;
-    opacity:1;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-    transform: translateY(128px);
-}
-
-.imageTile:hover .overlay {
-    transform: translateY(0px);
-}
-
-.imageTile:hover .overlayCaption{
-    display: block;
-}
-.image {
-    display: block;
-    height: 100%;
-    height: auto;
-}
-
-.overlayTitle{
-    color: white;
-    min-height: 50px;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.overlayCaption{
-    flex-grow: 1;
-    color: var(--yellow);
 }

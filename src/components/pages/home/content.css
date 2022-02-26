@@ -1,0 +1,120 @@
+.contentContainer{
+    padding-top: 50px;
+}
+
+.contentText{
+    font-size: 18px;
+    text-align: center;
+    margin: 0px;
+    font-family: var(--titleFont);
+}
+
+.contentTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cardIconContainer{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.line{
+    width: 10%;
+    margin: 10px 0px;
+    border: 3px solid var(--yellow);
+    opacity: 1;
+    border-radius: 5px;  
+}
+
+.sectorCard{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border: 1px solid transparent;
+    background-color: var(--white);
+}
+
+.sectorCard .line{
+    width: 0px;
+    transition: width 0.5s;
+    margin: 0px 5px;
+    border: 3px solid white;
+
+}
+.sectorCard:hover{
+    background-color: #fff;
+}
+.sectorCard:hover .line{
+    width: 50px;
+    border: 3px solid var(--yellow);
+}
+
+.cardText{
+    line-height: 24px;
+}
+
+.innerCaption{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    height: 100%;
+    align-items: flex-end;
+    padding: 0px 10px 15px 10px;
+    z-index: 0;
+}
+
+.image {
+    display: block;
+    height: 100%;
+    height: auto;
+    transition: transform 0.5s;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+    transform: translateY(-10px);
+}
+
+.imageTile{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--yellow);
+    border-radius: 10px;
+    border: 0px;
+}
+
+.imageTile:hover .image{
+    transform: translateY(-80px);
+}
+
+.imageTile:hover .overlayTitle{
+    transform: translateY(-80px);
+}
+
+
+.overlayTitle{
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    z-index: 1;
+    width: 100%;
+    bottom: 0px;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.5s;
+    background-color: var(--blue);
+    border-radius: 0px 0px 10px 10px;
+    transform: translateY(-10px);
+}
+
+.overlayTitle h3{
+    padding: 10px;
+}
+
+.cardIcon svg{
+    fill: var(--blue)
+}

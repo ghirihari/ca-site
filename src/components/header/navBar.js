@@ -1,19 +1,23 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import './navbar.css'
+import { useLocation } from 'react-router-dom'
+import Logo from '../../assets/JVSLogo.png'
 
 const NavBar = () => {
     const items = [
         {text:'Home', link:'/'},
-        {text:'About us', link:'about'},
+        {text:'About us', link:'/about'},
         {text:'Services', link:'/services'},
         {text:'FAQ', link:'/faq'},
         {text:'Careers', link:'/careers'},
-        {text:'Blog', link:'/'}
+        {text:'Blog', link:'/blog'},
+        {text:'Contact Us', link:'/contact'}
     ];
 
     const Menu = 
     <svg width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="Rounded" transform="translate(-885.000000, -3438.000000)">
                 <g id="Navigation" transform="translate(100.000000, 3378.000000)">
                     <g id="-Round-/-Navigation-/-menu" transform="translate(782.000000, 54.000000)">
@@ -26,10 +30,14 @@ const NavBar = () => {
             </g>
         </g>
     </svg>
+
+    const location = useLocation();
     return (
         <nav className="navbar navbar-expand-md">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="/">J Vishnu & Associates</a>
+            <div className='navContainer'>
+                <a className="navbar-brand" href="/">
+                    <img src={Logo} alt="Logo" style={{maxWidth:'100%'}}/>
+                </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon">
                         {Menu}
@@ -38,17 +46,16 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarsExample03">
                     <ul id="headerItems" className="navbar-nav mb-4 mb-sm-0">
                         {
-                            items.map((item, index)=>
-                                <li className="nav-item me-3" key={index}>      
-                                    <Link to={item.link}>{item.text}</Link>                  
-                                    {/* <a className="nav-link" href={item.link}>{item.text}</a> */}
-                                </li>
-                            )
+                            items.map((item, index)=>{
+                                const classes = location.pathname===item.link ? "nav-item nav-item-current" : "nav-item";    
+                                return(
+                                    <Link className={classes} key={index} to={item.link}>
+                                        {item.text}
+                                    </Link>
+                                )
+                            })
                         }
                     </ul>
-                </div>
-                <div className="collapse navbar-collapse" style={{flexGrow: 0}}>
-                    <button className="btn btn-dark navButton">Contact us</button>
                 </div>
             </div>
         </nav>

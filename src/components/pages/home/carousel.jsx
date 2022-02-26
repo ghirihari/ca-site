@@ -19,7 +19,7 @@ const Carousel = () => {
                         <div className="carousel-caption d-none d-md-block">
                             <div className="caption">
                                 <label className="carousel-caption-title">Effective Tax strategy</label>
-                                <button className="btn btn-warning">Our Services
+                                <button className="btn btn-warning buttonText">Our Services
                                     {rightButtonIcon}
                                 </button>
                             </div>
@@ -30,7 +30,7 @@ const Carousel = () => {
                         <div className="carousel-caption d-none d-md-block">
                             <div className="caption">
                                 <label className="carousel-caption-title">Comprehensive business solutions</label>
-                                <button className="btn btn-warning">About us
+                                <button className="btn btn-warning buttonText">About us
                                     {rightButtonIcon}
                                 </button>
                             </div>
