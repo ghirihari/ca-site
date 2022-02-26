@@ -1,9 +1,9 @@
 import React from 'react'
 import './content.css'
 // Images
-import Image1 from '../../../assets/exp1.jpg'
-import Image2 from '../../../assets/exp2.jpg'
-import Image3 from '../../../assets/exp3.jpg'
+import Image1 from '../../../assets/tax-min.jpg'
+import Image2 from '../../../assets/audit-min.jpg'
+import Image3 from '../../../assets/business-min.jpg'
 // Icons
 import {FaChartLine} from 'react-icons/fa';
 import {MdOutlineHealthAndSafety} from 'react-icons/md'

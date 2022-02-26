@@ -84,3 +84,7 @@
     background-color: var(--yellow);
     border-radius: 10px 10px 0px 0px;
 }
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
