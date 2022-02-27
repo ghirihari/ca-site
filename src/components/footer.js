@@ -3,19 +3,10 @@ import { Link } from 'react-router-dom';
 import './footer.css';
 import {SiLinkedin, SiTwitter} from 'react-icons/si'
 import { useLocation } from 'react-router-dom'
+import { navigation } from '../consts';
 
 const Footer = () => {
   const location = useLocation();
-  const items = [
-    {text:'Home', link:'/'},
-    {text:'About us', link:'/about'},
-    {text:'Services', link:'/services'},
-    {text:'FAQ', link:'/faq'},
-    {text:'Careers', link:'/careers'},
-    {text:'Blog', link:'/blog'},
-    {text:'Contact Us', link:'/contact'}
-  ];
-
   const links = [
     {
         icon: <SiTwitter size='24px'/>,
@@ -30,7 +21,7 @@ const Footer = () => {
     <div className='footer'>
       <div className='container footerLinks'>
         <div className='links m-3 d-none d-md-block'>
-          {items.map((item, index)=>{
+          {navigation.map((item, index)=>{
             const classes = location.pathname===item.link ? "current" : "";    
             return(<Link key={index} className={"me-3 footerLink "+classes} to={item.link}>{item.text}</Link>)
           })}

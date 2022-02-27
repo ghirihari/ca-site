@@ -3,18 +3,9 @@ import { Link } from "react-router-dom";
 import './navbar.css'
 import { useLocation } from 'react-router-dom'
 import Logo from '../../assets/JVSLogo.png'
+import { navigation } from '../../consts';
 
 const NavBar = () => {
-    const items = [
-        {text:'Home', link:'/'},
-        {text:'About us', link:'/about'},
-        {text:'Services', link:'/services'},
-        {text:'FAQ', link:'/faq'},
-        {text:'Careers', link:'/careers'},
-        {text:'Blog', link:'/blog'},
-        {text:'Contact Us', link:'/contact'}
-    ];
-
     const Menu = 
     <svg width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <g id="Icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -46,7 +37,7 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarsExample03">
                     <ul id="headerItems" className="navbar-nav mb-4 mb-sm-0">
                         {
-                            items.map((item, index)=>{
+                            navigation.map((item, index)=>{
                                 const classes = location.pathname===item.link ? "nav-item nav-item-current" : "nav-item";    
                                 return(
                                     <Link className={classes} key={index} to={item.link}>
