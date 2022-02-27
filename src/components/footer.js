@@ -29,16 +29,18 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='container footerLinks'>
-        <label className='footerTitle m-3'>JVishnuCA.com</label>
         <div className='links m-3 d-none d-md-block'>
-          {items.map(item=>{
+          {items.map((item, index)=>{
             const classes = location.pathname===item.link ? "current" : "";    
-            return(<Link className={"me-3 footerLink "+classes} to={item.link}>{item.text}</Link>)
+            return(<Link key={index} className={"me-3 footerLink "+classes} to={item.link}>{item.text}</Link>)
           })}
         </div>
         <div className='m-3'>
-          {links.map(item=><Link className="me-3 iconButton" to={item.link}>{item.icon}</Link>)}
+          {links.map((item, index)=><Link key={index} className="me-3 iconButton" to={item.link}>{item.icon}</Link>)}
         </div>
+
+        <label className='footerTitle m-3'>JVishnuCA.com</label>
+        <label className=''>23-4 Sambandham road east, RS Puram, Coimbatore, 641002</label>
       </div>
     </div>
   )

@@ -1,0 +1,106 @@
+@media (max-width:766px){
+    .founderContainer{
+        align-self: center;
+    }
+}
+
+.valuesContainer{
+    display:flex; 
+    flex-direction:row;
+    align-items: center;
+    margin-top: 35px;
+    padding: 5px 10px;
+}
+.valuesContainer:hover{
+    background-color: white;
+    border-radius: 10px;
+}
+.valuesIcon{
+    background-color: var(--yellow);
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.valuesIcon svg{
+    height: 30px;
+    width: 30px;
+}
+.valuesContent{
+    text-align: left;
+}
+.valuesTitle{
+    font-size:large;
+    font-weight: 500;
+}
+.valuesText{
+    font-size: medium;
+    font-weight: 300;
+}
+.AboutBannerTitle{
+    color: var(--white);
+    font-size: 36px;
+    font-weight: 600;
+}
+.AboutBannerText{
+    color: var(--yellow);
+    font-size: 36px;
+}
+
+.bannerBG{
+    background-image: url(../../../assets/blueBG.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blueOverlay{
+    background-color:rgba(15, 32, 75, 0.8);
+}
+
+.bannerIconContainer{
+    background: var(--yellow);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.missionsList{
+    color: white;
+    font-size: larger;
+    line-height: 50px;
+    font-weight: 400;
+}
+
+.founderContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: white;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.founderContainer img{
+    width: 200px;
+    border-radius: 12px;
+}
+
+.founderTitle{
+    font-size: large;
+    font-weight: bold;
+    margin: 10px 0px 0px 0px;
+}
+
+.founderDes{
+    font-size: medium;
+}
+
+.founderIcon svg{
+    fill: #aaa
+}
+
+.founderIcon:hover svg{
+    fill: var(--blue)
+}

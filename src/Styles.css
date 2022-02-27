@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
 :root{
     --textColor:#252525;
@@ -21,7 +20,7 @@ a:hover {
 
 body {
     background-color: var(--white);
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--titleFont)
 }
 
 .titleInfoBar{
@@ -111,14 +110,6 @@ body {
     margin: 0px 5px;
     color: var(--textColor);
 }
-
-/* .bannerBG{
-    background-image: url(./assets/blueBG.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
 .banner{
     display: flex;

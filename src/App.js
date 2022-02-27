@@ -8,12 +8,14 @@ import Faq from './components/pages/faq/faq';
 import Careers from './components/pages/careers/careers';
 import Services from './components/pages/services/services'
 import Footer from './components/footer'
+import TitleRoute from './components/common/RouteTitle';
 
 function App() {
   return (
     <div className="App">
       <InfoBar/>
       <NavBar/>
+      <TitleRoute/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />

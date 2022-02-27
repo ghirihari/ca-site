@@ -12,7 +12,7 @@ import {RiGovernmentLine, RiLightbulbFlashLine, RiTruckLine, RiHomeGearLine} fro
 const OurExperience = () => {
     const exp = [
         {image:Image1,captionTitle:'Direct and indirect taxation',captionText:'Our experienced Partners provide sustainable Advisory Services'},
-        {image:Image2,captionTitle:'Audit & Assurance',captionText:'Our integrated team of senior qualified and dynamic professionals provide quality'},
+        {image:Image2,captionTitle:'Audit & Assurance',captionText:'Our team of qualified and dynamic professionals provide quality'},
         {image:Image3,captionTitle:'Business advisory services',captionText:'Our experienced Partners provide sustainable Advisory Services'}
     ]
 
