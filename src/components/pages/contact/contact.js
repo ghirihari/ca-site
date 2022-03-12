@@ -12,9 +12,9 @@ const Contact = () => {
             <hr className='line'/>
         </div>
         <div className='container'>
-            <div className='expContainer'>
+            <div className='expContainer' style={{margin:'20px 0px'}}>
                 <div className='row'>
-                    <div className='col' style={{display:'flex', alignItems:'center'}}>
+                    <div className='col d-none d-lg-block' style={{display:'flex', alignItems:'center'}}>
                         <div className="contactCard">
                             <h2>J Vishnu & Associates</h2>
                             <div>
@@ -41,9 +41,9 @@ const Contact = () => {
                     <div className='col'>
                         <h4>Leave us a message</h4>
                         <div className="contactForm">
-                            <input type="email" class="form-control" placeholder="Name"/>
-                            <input type="email" class="form-control" placeholder="Email"/>
-                            <textarea type="email" class="form-control" placeholder="Enter your message"/>
+                            <input type="email" className="form-control" placeholder="Name"/>
+                            <input type="email" className="form-control" placeholder="Email"/>
+                            <textarea type="email" className="form-control" placeholder="Enter your message"/>
                             <button className='btn btn-warning form-control'>Submit</button>
                         </div>
                     </div>
