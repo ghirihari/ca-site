@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Image0 from "../../../assets/image0.jpg";
 import Image1 from "../../../assets/image1.jpg";
 
@@ -19,9 +20,11 @@ const Carousel = () => {
                         <div className="carousel-caption d-none d-md-block">
                             <div className="caption">
                                 <label className="carousel-caption-title">Effective Tax strategy</label>
-                                <button className="btn btn-warning buttonText">Our Services
-                                    {rightButtonIcon}
-                                </button>
+                                <Link to={'./services'}>
+                                    <button className="btn btn-warning buttonText">Our Services
+                                        {rightButtonIcon}
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -30,9 +33,11 @@ const Carousel = () => {
                         <div className="carousel-caption d-none d-md-block">
                             <div className="caption">
                                 <label className="carousel-caption-title">Comprehensive business solutions</label>
-                                <button className="btn btn-warning buttonText">About us
-                                    {rightButtonIcon}
-                                </button>
+                                <Link to={'./about'}>
+                                    <button className="btn btn-warning buttonText">About us
+                                        {rightButtonIcon}
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,27 @@
+.contactForm *{
+    margin-top: 10px;
+}
+
+.contactCard{
+    display:flex; 
+    flex-direction:column;
+    text-align:left;
+}
+
+.contactCard > div{
+    display:flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.contactCard > div svg{
+    margin-right: 10px;
+    fill:var(--yellow);
+}
+
+.locationLink:hover{
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: var(--yellow);
+    text-decoration-thickness: 2px;
+}

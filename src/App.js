@@ -9,7 +9,7 @@ import Blog from './components/pages/blog/Blog';
 // import Careers from './components/pages/careers/careers';
 import Contact from './components/pages/contact/contact';
 import Services from './components/pages/services/services'
-import Footer from './components/footer'
+import Footer from './components/footer/footer'
 import TitleRoute from './components/common/RouteTitle';
 
 function App() {
@@ -23,8 +23,6 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services/>} />
         <Route path="blog" element={<Blog />} />
-        {/* <Route path="faq" element={<Faq />} />
-        <Route path="careers" element={<Careers />} /> */}
         <Route path="contact" element={<Contact />} />
       </Routes>
       <Footer/>
