@@ -3,22 +3,32 @@ import './contact.css'
 import {ImLocation2} from 'react-icons/im'
 import {GiRotaryPhone} from 'react-icons/gi'
 import {IoIosMail} from 'react-icons/io'
-import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
     const form = useRef();
-    const [button, setButton] = useState({name:'Send', class:'btn-warning'})
+    const [button, setButton] = useState({name:'Submit', class:'btn-warning'})
+
+    const validate = () => {
+
+    }
+
     const sendMail = (e) => {
         e.preventDefault();
-        setButton({name:'Sending', class:'btn-warning'})
+        validate(form.current.name.value,form.current.email.value,form.current.message.value)
+        setButton({name:'Submitting', class:'btn-warning'})
 
-        emailjs.sendForm('service_8lmyc6c', 'template_ij9tpss', form.current, 'user_L0Y9hEo4STMqYeIfDSDrB')
-            .then((result) => {
-                console.log(result.text);
-                setButton({name:'Message Sent', class:'btn-success'})
-            }, (error) => {
+        fetch(`http://localhost:5000/send?name=${form.current.name.value}&email=${form.current.email.value}&message=${form.current.message.value}`)
+        .then(response => {
+            if(response.status===200)
+                setButton({name:'Submitted', class:'btn-success'})
+            else
                 setButton({name:'Failed, Try again later', class:'btn-danger'})
-            });
+            
+        })
+        .catch(error => {
+            setButton({name:'Failed, Try again later', class:'btn-danger'})
+        });
     }
     
 
@@ -58,9 +68,9 @@ const Contact = () => {
                         <div className='col'>
                             <h4>Leave us a message</h4>
                             <form className="contactForm" ref={form} onSubmit={sendMail}>
-                                <input type="text" name="name" className="form-control" placeholder="Name"/>
-                                <input type="email" name="email" className="form-control" placeholder="Email"/>
-                                <textarea name="message" className="form-control" placeholder="Enter your message"/>
+                                <input type="text" name="name" className="form-control" placeholder="Name" required/>
+                                <input type="email" name="email" className="form-control" placeholder="Email" required/>
+                                <textarea name="message" className="form-control" placeholder="Enter your message" required/>
                                 <button 
                                     type="submit" 
                                     className={'btn form-control '+button.class}
