@@ -18,7 +18,7 @@ const Contact = () => {
         validate(form.current.name.value,form.current.email.value,form.current.message.value)
         setButton({name:'Submitting', class:'btn-warning'})
 
-        fetch(`http://localhost:5000/send?name=${form.current.name.value}&email=${form.current.email.value}&message=${form.current.message.value}`)
+        fetch(`https://emailing-api.herokuapp.com/send?name=${form.current.name.value}&email=${form.current.email.value}&message=${form.current.message.value}`)
         .then(response => {
             if(response.status===200)
                 setButton({name:'Submitted', class:'btn-success'})
