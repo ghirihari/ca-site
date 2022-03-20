@@ -64,7 +64,7 @@
     display: flex;
     position: absolute;
     bottom: 0px;
-    height: 100%;
+    /* height: 100%; */
     align-items: flex-end;
     padding: 0px 10px 15px 10px;
     z-index: 0;
@@ -89,13 +89,13 @@
     border: 0px;
 }
 
-.imageTile:hover .image{
-    transform: translateY(-80px);
+/* .imageTile:hover .image{
+    transform: translateY(-110px);
 }
 
 .imageTile:hover .overlayTitle{
-    transform: translateY(-80px);
-}
+    transform: translateY(-110px);
+} */
 
 
 .overlayTitle{

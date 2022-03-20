@@ -1,3 +1,4 @@
+import React from 'react'
 import './Styles.css';
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/header/navBar";

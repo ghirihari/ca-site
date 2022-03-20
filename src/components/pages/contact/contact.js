@@ -3,6 +3,7 @@ import './contact.css'
 import {ImLocation2} from 'react-icons/im'
 import {GiRotaryPhone} from 'react-icons/gi'
 import {IoIosMail} from 'react-icons/io'
+import { address, mailID, phoneNumber } from '../../../consts'
 
 
 const Contact = () => {
@@ -49,19 +50,19 @@ const Contact = () => {
                                     <div>
                                         <a
                                             target="_blank" rel="noopener noreferrer"
-                                            href='https://www.google.com/maps/place/A+Jayachandran+%26+Associates.+CHARTERED+ACCOUNTANTS/@11.0085815,76.9515132,17z/data=!4m5!3m4!1s0x3ba8598a9559b763:0x5edb60c1ee0872d!8m2!3d11.0085762!4d76.9537019'
+                                            href={address.link}
                                             className='locationLink'>
-                                                23-4 Sambandam road east, RS Puram, Coimbatore-641002
+                                            {address.text}
                                         </a>
                                     </div>
                                 </div>
                                 <div>
                                     <IoIosMail size={32}/> 
-                                    <label>cajvishnu@gmail.com</label>
+                                    <label>{mailID}</label>
                                 </div>
                                 <div>
                                     <GiRotaryPhone size={32}/>
-                                    <label>0422-4952586 / 0422-2474786</label>
+                                    <label>{phoneNumber[0]} / {phoneNumber[1]}</label>
                                 </div>
                             </div>
                         </div>
