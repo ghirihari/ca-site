@@ -88,3 +88,27 @@
 .navbar-toggler:focus{
     box-shadow: none;
 }
+  
+.hamburger:before, .hamburger:after, .hamburger div {
+    background: var(--blue);
+    content: "";
+    display: block;
+    height: 3px;
+    border-radius: 3px;
+    margin: 0 0 5px 0;
+    transition: 0.5s;
+    width: 100%;
+}
+.xicon:before {
+    transform: translateY(8px) rotate(135deg);
+}
+.xicon:after {
+    transform: translateY(-8px) rotate(-135deg);
+}
+.xicon div {
+    transform: scale(0);
+}
+.navbar-toggler-icon{
+    display: block;
+    width: 30px;
+}
