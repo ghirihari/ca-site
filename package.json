@@ -18,7 +18,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "yarn run build && (cd server && yarn start)",
+    "start": "yarn run build",
     "start-client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

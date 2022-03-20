@@ -18,7 +18,7 @@ const Experience = ({title,count}) => {
             animate(index, 10);
           })
         } 
-      }, []);
+      }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return(
         <div className="expContainer">
