@@ -10,7 +10,7 @@
     align-items: center;
     margin-top: 35px;
     padding: 5px 10px;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .valuesContainer:hover{
     background-color: white;
