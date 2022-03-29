@@ -109,6 +109,6 @@ export const twitter = {userid:'@sanker_vishnu',link:'https://twitter.com/sanker
 export const linkedin = "https://www.linkedin.com/in/ca-vishnu-sanker-44584b140/"
 export const phoneNumber = ['0422-4952586','+91 96593 79621'];
 export const address = {
-    text:'23-4 Sambandam road east, RS Puram, Coimbatore-641002',
-    link:'https://www.google.com/maps/place/A+Jayachandran+%26+Associates.+CHARTERED+ACCOUNTANTS/@11.0085815,76.9515132,17z/data=!4m5!3m4!1s0x3ba8598a9559b763:0x5edb60c1ee0872d!8m2!3d11.0085762!4d76.9537019',
+    text:'1st Floor, 23-4, Sambandam Rd E, R.S. Puram, Coimbatore, Tamil Nadu 641038',
+    link:'https://www.google.com/maps/place/J+VISHNU+%26+ASSOCIATES+-+Chartered+Accountants/@11.0088447,76.95156,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba8599556793d77:0x9433556b3e79fd70!8m2!3d11.0088447!4d76.9537487?hl=en-US',
 }
