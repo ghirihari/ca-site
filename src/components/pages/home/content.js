@@ -16,9 +16,11 @@ const Sectors = () => {
                     <div className="col" key={index}>
                         <div className="card sectorCard">
                             <div className='cardIconContainer'>
-                                <hr className='line'/>
-                                <div className="cardIcon">{item.icon}</div>
-                                <hr className='line'/>
+                                {/* <hr className='line'/> */}
+                                <div className="cardImage">
+                                    <img src={item.image} alt={item.text}/>
+                                </div>
+                                {/* <hr className='line'/> */}
                             </div>
                             <h5 className="cardText">{item.text}</h5>
                         </div>

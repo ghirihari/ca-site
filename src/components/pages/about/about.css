@@ -105,3 +105,10 @@
 .founderIcon:hover svg{
     fill: var(--blue)
 }
+
+.coreList{
+    font-size: larger;
+    line-height: 50px;
+    font-weight: 400;
+    text-align: left;
+}
