@@ -22,7 +22,7 @@ const Sectors = () => {
                                 </div>
                                 {/* <hr className='line'/> */}
                             </div>
-                            <h5 className="cardText">{item.text}</h5>
+                            <h4 className="cardText">{item.text}</h4>
                         </div>
                     </div>
                 )}

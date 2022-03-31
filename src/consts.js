@@ -12,8 +12,8 @@ import Service3 from './assets/service3.jpg'
 import Service4 from './assets/service4.jpg'
 import Service5 from './assets/service5.jpg'
 import Service6 from './assets/service6.jpg'
+import Data from "./constants.json"
 
-import Data from './constants.json'
 export const navigation = [
     {text:'Home', link:'/'},
     {text:'About us', link:'/about'},

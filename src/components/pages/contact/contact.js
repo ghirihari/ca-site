@@ -34,10 +34,38 @@ const Contact = () => {
     
 
     return (
-        <div className="expContainer">
+        <div className="expContainer" style={{margin:'30px 0px'}}>
             <div className='contentTitle'>
                 <label className="subtitle">Get in touch</label>
                 <hr className='line'/>
+            </div>
+            <div className='bannerBG'>
+                <div className='blueOverlay'>
+                    <div className='col d-lg-none' style={{display:'flex', alignItems:'center'}}>
+                        <div className="contactCard">
+                            <h1>J Vishnu & Associates</h1>
+                            <div>
+                                <ImLocation2 size={32} style={{minWidth:"32px"}}/>
+                                <div>
+                                    <a
+                                        target="_blank" rel="noopener noreferrer"
+                                        href={address.link}
+                                        className='locationLink'>
+                                        {address.text}
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <IoIosMail size={32}/> 
+                                <label>{mailID}</label>
+                            </div>
+                            <div>
+                                <GiRotaryPhone size={32}/>
+                                <label>{phoneNumber[0]} / {phoneNumber[1]}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className='container'>
                 <div className='expContainer' style={{margin:'20px 0px'}}>

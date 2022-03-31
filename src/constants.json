@@ -1,6 +1,6 @@
 {
     "home": {
-        "introContent": "J VISHNU & ASSOCIATES is a firm of Chartered Accountants in India, headquartered in Coimbatore. The firm was founded by J. Vishnu Sanker, providing services in  Audit, Assurance, Direct Taxation, GST and consultancy services.",
+        "introContent": "J VISHNU & ASSOCIATES is a firm of Chartered Accountants, providing services to meet the complex and evolving taxation, compliance and financial reporting challenges.",
         "subtitles": [
             "Our experience",
             "Experience in sectors"
@@ -18,7 +18,7 @@
             "data": [
             "Manufacturing, Textile and Infotech",
             "Finance, Banking, Retail and Trading",
-            "Jewellery Food Processing, FMCG and Healthcare",
+            "Jewellery, Food Processing, FMCG and Healthcare",
             "NGO/NPO, Charity and Education",
             "Energy, Capital, Goods, Chemical and Fertiliser",
             "Automobile, Machinery and Construction"
@@ -27,12 +27,12 @@
     },
     "about":{
         "subtitles":[
-            "Core values",
+            "Our key strength",
             "Our Mission",
             "Our Founder"
         ],
         "content":[
-            "A strong team of inhouse professionals/Articled/Audit Assistants and other associates providing services in Taxation, Business Advisory, Corporate Compliance, Business Support Services. Our firm's policy ensures exemplary services to each client irrespective of location and size. This is attained by our specilized and cross-functional teams.",
+            "J VISHNU & ASSOCIATES is a firm of Chartered Accountants, providing services to meet the complex and evolving taxation, compliance and financial reporting challenges. Our firm's policy ensures exemplary services to each client irrespective of location and size. This is attained by our specilized and cross-functional teams.",
             "The firm is engaged in providing services to Corporates, Firms, and Individuals tailored to meet their requirements. Our exposure to various sectors  gives us a distinctive ability to implement tailored solutions that suit our clients’ unique business needs. Our strategy involves implementing internal knowledge management systems to deliver performance-based and technology-enabled business advisory services to our clients."
         ],
         "missions":[
@@ -41,11 +41,9 @@
             "To promote a healthy working environment ensuring a trustworthy relationship with out stakeholders."    
         ],
         "coreValues":[
-            "To provide exemplary financial servics to our clients in a timely manner.",
-            "To constantly aim for higher specialisation to meet our stakeholders requirements.",
-            "To promote a healthy working environment ensuring a trustworthy relationship with out stakeholders.",
-            "To provide exemplary financial servics to our clients in a timely manner.",
-            "To constantly aim for higher specialisation to meet our stakeholders requirements."
+            "Customised services to meet clients' requirements.",
+            "Support services at every stage of business development.",
+            "Use of softwares for automation and compliances."
         ],
         "banner":["Quality, Compliance", "& Trust"],
         "founder":{
@@ -78,7 +76,7 @@
         "linkedIn":"https://www.linkedin.com/in/ca-vishnu-sanker-44584b140/",
         "phone":["0422-4952586","+91 96593 79621"],
         "address":{
-            "text":"1st Floor, 23-4, Sambandam Rd E, R.S. Puram, Coimbatore, Tamil Nadu 641002",
+            "text":"1st Floor, 23-4, Sambandam Rd East, R.S. Puram, Coimbatore, Tamil Nadu 641002",
             "link":"https://www.google.com/maps/place/J+VISHNU+%26+ASSOCIATES+-+Chartered+Accountants/@11.0088447,76.95156,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba8599556793d77:0x9433556b3e79fd70!8m2!3d11.0088447!4d76.9537487?hl=en-US"        
         }
     }

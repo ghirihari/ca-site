@@ -2,6 +2,16 @@
     margin-top: 10px;
 }
 
+.bannerBG .contactCard{
+    align-items: left;
+    padding: 20px 10px;
+    color: white;
+}
+
+.bannerBG .contactCard h1{
+    text-align: center;
+}
+
 .contactCard{
     display:flex; 
     flex-direction:column;

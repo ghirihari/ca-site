@@ -12,7 +12,7 @@ import { about, twitter, linkedin } from '../../../consts'
 
 const Intro = () => {
   return(
-    <div className="contentContainer contentText" style={{paddingBottom:'50px', textAlign:'justify'}}>
+    <div className="contentContainer contentText" style={{paddingBottom:'50px', textAlign:'justify', fontSize:'18px'}}>
       <p>{about.content.para1}</p>
       <p>{about.content.para2}</p>
     </div>

@@ -1,9 +1,15 @@
+@media (max-width:766px){
+    .contentText{
+        font-size: 18px !important;
+    }
+}
+
 .contentContainer{
     padding: 50px 0px 0px 0px;
 }
 
 .contentText{
-    font-size: 18px;
+    font-size: 24px;
     text-align: center;
     margin: 0px;
     font-family: var(--titleFont);
@@ -17,7 +23,7 @@
 }
 
 .cardIconContainer{
-    flex-grow: 1;
+    height: 185px;
 }
 
 .line{
@@ -48,14 +54,17 @@
 
 .cardImage img{
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
 .cardText{
     padding: 10px;
-    font-weight: 600;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .innerCaption{
