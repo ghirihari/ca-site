@@ -27,7 +27,10 @@ const Footer = () => {
           })}
         </div>
         <div className='m-3'>
-          {links.map((item, index)=><Link key={index} className="me-3 iconButton" to={item.link}>{item.icon}</Link>)}
+          {links.map((item, index)=>
+            <a key={index} className="me-3 iconButton" href={item.link} target="_blank" rel="noopener noreferrer">
+              {item.icon}
+            </a>)}
         </div>
 
         <label className='footerTitle m-3'>JVishnuCA.in</label>
