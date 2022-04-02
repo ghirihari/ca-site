@@ -8,27 +8,25 @@ import {SiLinkedin, SiTwitter} from 'react-icons/si'
 import Image from '../../../assets/founder.jpeg'
 // Styles
 import './about.css'
-import { about, twitter, linkedin } from '../../../consts'
 
-const Intro = () => {
+const Intro = ({data}) => {
   return(
     <div className="contentContainer contentText" style={{paddingBottom:'50px', textAlign:'justify', fontSize:'18px'}}>
-      <p>{about.content.para1}</p>
-      <p>{about.content.para2}</p>
+      {data.map((item,index)=><p key={index}>{item}</p>)}
     </div>
   )
 }
 
-const CoreValues = () => {
+const CoreValues = ({title,data}) => {
 
   return(
     <div className="expContainer">
         <div className='contentTitle'>
-            <label className="subtitle">{about.coreValues.title}</label>
+            <label className="subtitle">{title}</label>
             <hr className='line'/>
         </div>
         <ul className='coreList'>
-            {about.coreValues.data.map((item, index)=>
+            {data.map((item, index)=>
               <li key={index} style={{marginTop:'10px'}}>{item}</li>
             )}
           </ul>
@@ -36,7 +34,7 @@ const CoreValues = () => {
   )
 }
   
-const Banner = () => {
+const Banner = ({data}) => {
   return(
     <div className="bannerBG">
       <div className='banner blueOverlay'>
@@ -45,8 +43,8 @@ const Banner = () => {
         </div>
         <div style={{marginLeft:'15px', display:'flex',flexDirection:'column'}}>
           <div>
-            <label className="AboutBannerTitle">{about.banner[0]}&nbsp;</label>
-            <label className="AboutBannerText">{about.banner[1]}</label>
+            <label className="AboutBannerTitle">{data[0]}&nbsp;</label>
+            <label className="AboutBannerText">{data[1]}</label>
           </div>
         </div>
       </div>
@@ -54,17 +52,17 @@ const Banner = () => {
   )
 }
 
-const OurMission = () => {
+const OurMission = ({title, data}) => {
   return(
     <div className='bannerBG'>
       <div className='blueOverlay' style={{padding:'50px 0px'}}>
         <div className='container'>
           <div className='contentTitle' style={{alignItems:'start'}}>
-            <label className="AboutBannerTitle">{about.missions.title}</label>
+            <label className="AboutBannerTitle">{title}</label>
             <hr className='line'/>
           </div>
           <ul className='missionsList'>
-            {about.missions.data.map((item, index)=>
+            {data.map((item, index)=>
               <li key={index} style={{marginTop:'10px'}}>{item}</li>
             )}
           </ul>
@@ -74,22 +72,22 @@ const OurMission = () => {
   )
 }
 
-const OurFounder = () => {
-  const links = [
+const OurFounder = ({title, data, links}) => {
+  const linkData = [
     {
         icon: <SiTwitter size='24px'/>,
-        link:twitter.link,
+        link:links.twitter.link,
     },
     {
         icon:<SiLinkedin size='24px'/>,
-        link:linkedin,
+        link:links.linkedIn,
     },
   ]
 
   return(
       <div className='expContainer'>
         <div className='contentTitle' style={{alignItems:'start'}}>
-          <label className="AboutBannerTitle" style={{color:'var(--blue)'}}>{about.founder.title}</label>
+          <label className="AboutBannerTitle" style={{color:'var(--blue)'}}>{title}</label>
           <hr className='line'/>
         </div>
         <div className='founderContainer'>
@@ -97,10 +95,10 @@ const OurFounder = () => {
             <img src={Image} alt="Founder"/>
           </div>
           <div style={{display:'flex', flexDirection:'column'}}>
-            <label className='founderTitle'>{about.founder.name}</label>
-            <label className='founderDes'>{about.founder.designation}</label>
+            <label className='founderTitle'>{data.name}</label>
+            <label className='founderDes'>{data.designation}</label>
             <div className='mt-1'>
-              {links.map((item, index)=>
+              {linkData.map((item, index)=>
                 <a 
                   key={index} 
                   className="me-3 founderIcon" 
@@ -118,19 +116,20 @@ const OurFounder = () => {
   )
 }
 
-const About = () => {
+const About = ({aboutData, links}) => {
+  console.log(links)
   return (
     <>
       <div className='container'>
-        <Intro/>
+        <Intro data={aboutData.content}/>
       </div>
-      <Banner/>
+      <Banner data={aboutData.banner}/>
       <div className='container'>
-        <CoreValues/>
+        <CoreValues data={aboutData.coreValues} title={aboutData.subtitles[0]}/>
       </div>
-      <OurMission/>
+      <OurMission title={aboutData.subtitles[1]} data={aboutData.missions}/>
       <div className='container'>
-        <OurFounder/>
+        <OurFounder title={aboutData.subtitles[2]} data={aboutData.founder} links={links}/>
       </div>
     </>
   )

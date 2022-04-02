@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom';
 import './footer.css';
 import {SiLinkedin, SiTwitter} from 'react-icons/si'
 import { useLocation } from 'react-router-dom'
-import { address, linkedin, navigation, twitter } from '../../consts';
 
-const Footer = () => {
+const Footer = ({navigation, links}) => {
   const location = useLocation();
-  const links = [
+  console.log(links)
+  const linkData = [
     {
         icon: <SiTwitter size='24px'/>,
-        link:twitter.link,
+        link:links.twitter.link,
     },
     {
         icon:<SiLinkedin size='24px'/>,
-        link:linkedin,
+        link:links.linkedIn,
     },
   ]
   return (
@@ -27,14 +27,14 @@ const Footer = () => {
           })}
         </div>
         <div className='m-3'>
-          {links.map((item, index)=>
+          {linkData.map((item, index)=>
             <a key={index} className="me-3 iconButton" href={item.link} target="_blank" rel="noopener noreferrer">
               {item.icon}
             </a>)}
         </div>
 
         <label className='footerTitle m-3'>JVishnuCA.in</label>
-        <label className=''>{address.text}</label>
+        <label className=''>{links.address.text}</label>
       </div>
     </div>
   )

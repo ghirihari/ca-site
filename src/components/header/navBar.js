@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import './navbar.css'
 import { useLocation } from 'react-router-dom'
 import Logo from '../../assets/JVSLogo.png'
-import { navigation } from '../../consts';
 
-const NavBar = () => {
+const NavBar = ({navigation}) => {
     const location = useLocation();
     const animate = () => {
         const icon = document.getElementById('hamburger');

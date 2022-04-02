@@ -2,16 +2,8 @@ import React from 'react'
 import { useLocation } from 'react-router-dom';
 import './RouteTitle.css';
 
-const TitleRoute = () => {
-    const items = [
-        {text:'Home', link:'/'},
-        {text:'About us', link:'/about'},
-        {text:'Services', link:'/services'},
-        {text:'FAQ', link:'/faq'},
-        {text:'Careers', link:'/careers'},
-        {text:'Blog', link:'/blog'},
-        {text:'Contact Us', link:'/contact'}
-    ];
+const TitleRoute = ({navigation}) => {
+    const items = navigation;
     const location = useLocation();
     const title = items.filter(item=>item.link===location.pathname)[0].text;
     

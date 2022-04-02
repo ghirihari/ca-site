@@ -1,9 +1,8 @@
 import React from 'react'
 import ParticlesCont from './particles';
 import { Link } from "react-router-dom";
-import { bannerData } from '../../../consts';
 
-const Banner = () => {
+const Banner = ({bannerData}) => {
   return (
     <div className="container-fluid">
       <div className='row banner'>

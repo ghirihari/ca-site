@@ -13,22 +13,48 @@ import Services from './components/pages/services/services'
 import Footer from './components/footer/footer'
 import TitleRoute from './components/common/RouteTitle';
 
-function App() {
-  return (
-    <div className="App">
-      <InfoBar/>
-      <NavBar/>
-      <TitleRoute/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Services/>} />
-        <Route path="blog" element={<Blog />} />
-        <Route path="contact" element={<Contact />} />
-      </Routes>
-      <Footer/>
-    </div>
-  );
+class App extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+      data:null
+    }
+  }
+  getData = async() => {
+    const res = await fetch('constants.json');
+    const data = await res.json();
+    this.setState({data:data})
+  }
+
+  componentDidMount=()=>{
+    this.getData();
+  }
+  
+  render(){
+    console.log(this.state.data)
+    return (
+      <>
+        {this.state.data 
+          ?
+          <div className="App">
+            <InfoBar link={this.state.data.links}/>
+            <NavBar navigation={this.state.data.navigation}/>
+            <TitleRoute navigation={this.state.data.navigation}/>
+            <Routes>
+              <Route path="/" element={<Home data={this.state.data.home} services={this.state.data.services}/>} />
+              <Route path="about" element={<About aboutData={this.state.data.about} links={this.state.data.links}/>} />
+              <Route path="services" element={<Services servicesData={this.state.data.services}/>} />
+              <Route path="blog" element={<Blog />} />
+              <Route path="contact" element={<Contact links={this.state.data.links} data={this.state.data.contactUS}/>} />
+            </Routes>
+            <Footer navigation={this.state.data.navigation} links={this.state.data.links}/>
+          </div>
+          : 
+          <></>
+        }
+      </>
+    );
+  }
 }
 
 export default App;

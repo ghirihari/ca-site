@@ -2,10 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Image0 from "../../../assets/image0.jpg";
 import Image1 from "../../../assets/image1.jpg";
-import { carouselData } from '../../../consts';
 
-const Carousel = () => {
-
+const Carousel = ({data:carouselData}) => {
     const rightButtonIcon = <svg className="feather feather-chevron-right CarouselIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>;
     
     return (
