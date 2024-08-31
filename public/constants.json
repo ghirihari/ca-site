@@ -1,10 +1,9 @@
 {
     "navigation": [
         {"text":"Home", "link":"/"},
-        {"text":"About us", "link":"/about"},
-        {"text":"Services", "link":"/services"},
-        {"text":"Blog", "link":"/blog"},
-        {"text":"Contact Us", "link":"/contact"}
+        {"text":"About us", "link":"aboutSection"},
+        {"text":"Services", "link":"servicesSection"},
+        {"text":"Contact Us", "link":"contactSection"}
     ],    
     "home": {
         "introContent": "J VISHNU & ASSOCIATES is a firm of Chartered Accountants, providing services to meet the complex and evolving taxation, compliance and financial reporting challenges.",
@@ -13,83 +12,86 @@
             "Experience in sectors"
         ],
         "carousel":[
-            {"title":"Effective Tax strategy", "button":"Our Services"},
-            {"title":"Comprehensive business solutions", "button":"About us"}
+            {"title":"Comprehensive business solutions", "button":"Fix an appointment"},
+            {"title":"Effective Tax strategy", "button":"Fix an appointment"}
         ],
         "banner":{
             "mobile":"Get in touch with us",
-            "pc":"Having a query? Please reach out to us.",
+            "pc":"Contact us to make an appointment.",
             "button":"Fix an appointment"
         },
         "sectorData": {
             "data": [
-            "Manufacturing, Textile and Infotech",
-            "Finance, Banking, Retail and Trading",
+            "Healthcare, Charity & Education.",
+            "Manufacturing, Retail & Textiles, Hotels.",
+            "Renewable Energy, Automobiles, Trading.",
             "Jewellery, Food Processing, FMCG and Healthcare",
-            "NGO/NPO, Charity and Education",
-            "Energy, Capital, Goods, Chemical and Fertiliser",
-            "Automobile, Machinery and Construction"
+            "NGO/NPO, RWA, AOP.",
+            "Information Technology & ITES"
             ]
         }
     },
     "about":{
         "subtitles":[
-            "Our key strength",
+            "Our Distinguished Advantage",
             "Our Mission",
-            "Our Founder"
+            "Our Partners"
         ],
         "content":[
-            "J VISHNU & ASSOCIATES is a firm of Chartered Accountants, providing services to meet the complex and evolving taxation, compliance and financial reporting challenges. Our firm's policy ensures exemplary services to each client irrespective of location and size. This is attained by our specilized and cross-functional teams.",
-            "The firm is engaged in providing services to Corporates, Firms, and Individuals tailored to meet their requirements. Our exposure to various sectors  gives us a distinctive ability to implement tailored solutions that suit our clients’ unique business needs. Our strategy involves implementing internal knowledge management systems to deliver performance-based and technology-enabled business advisory services to our clients."
+            "A JAYACHANDRAN & ASSOCIATES is a Chartered Accountancy firm, dedicated to navigating the intricate and ever-evolving landscapes of taxation, regulatory compliance, financial reporting, and litigation assistance. Our core principle revolves around delivering unparalleled services tailored to the unique needs of every client, regardless of their scope or geographical footprint. This unwavering commitment is made feasible through the expertise of our dynamic and multidisciplinary teams.",
+            "We specialize in serving a diverse clientele, offering customized solutions finely attuned to their specific requirements. Our extensive exposure across various industry verticals endows us with the distinct acumen to devise tailor-made strategies that precisely address the distinctive business challenges faced by our clients. Central to our operational blueprint is the integration of internal knowledge management systems, enabling us to deliver performance-driven and technology-infused advisory services that drive value for our esteemed clientele"
         ],
         "missions":[
-            "To provide exemplary financial servics to our clients in a timely manner.",
-            "To constantly aim for higher specialisation to meet our stakeholders requirements.",
-            "To promote a healthy working environment ensuring a trustworthy relationship with out stakeholders."    
+            "Delivering exemplary financial services promptly and effectively to our clients.",
+            "Pursuing ongoing specialization to consistently meet stakeholder demands and expectations.",
+            "Cultivating a positive and nurturing work environment to foster trust and long-term relationships with stakeholders.",
+            "Striving for excellence in all aspects of our operations, guided by integrity and professionalism.",
+            "Collaborating closely with clients and stakeholders to achieve collective financial prosperity and success."
         ],
         "coreValues":[
-            "Customised services to meet clients' requirements.",
-            "Support services at every stage of business development.",
-            "Use of softwares for automation and compliances."
+            "Tailored solutions to accommodate clients' needs.",
+            "Technology driven approach in various compliances.",
+            "Comprehensive support services across all aspects of your business."
         ],
         "banner":["Quality, Compliance", "& Trust"],
         "founder":{
-            "name":"J Vishnu Sanker",
-            "designation":"Chartered Accountant"
-        }
+                "name":"J Vishnu Sanker",
+                "designation":"Chartered Accountant"
+            }
     },
     "services":{
         "subtitle":"Our services",
         "title":[
-            "Direct & Indirect Taxation",
             "Audit & Assurance",
-            "Business Advisory Services",
-            "Accounting & Supporting Services",
-            "Internal Audit",
-            "Corporate Law Compliance"
+            "Transaction Advisory services",
+            "Tax Litigation",
+            "Business Support services",
+            "Internal Audit & Stock Audit",
+            "Direct & Indirect Tax Advisory"
+
         ],
         "text":[
-            "Our experienced team of professionals provide comprehensive taxation solutions to our clients.",
-            "Our firm's qualified professionals provide serivices in-line with Standards on auditing.",
-            "Our firm's exposure in various sectors helps us serve our clients with dynamic advisory services.",
-            "Our firm provides accounting and reporting services in line with Accounting Standards.",
-            "Our firm provides internal audit services to suit organisation needs.",
-            "Our firm's experienced professionals provide timely compliance and other corporate support services."
+            "Our firm's proficient professionals deliver services in accordance with Auditing Standards.",
+            "Expert guidance for strategic transactions, ensuring optimal outcomes.",
+            "Strategic guidance and expert representation in navigating tax-related legal challenges and litigation proceedings.",
+            "Customized strategic advice and comprehensive insights tailored to optimize business performance, foster growth, and navigate challenges effectively.",
+            "Comprehensive scrutiny and strategic assessment of internal operations and inventory, ensuring regulatory adherence and precision.",
+            "Our team of professionals provide expert guidance and strategic consultation on both direct and indirect tax matters, ensuring compliance and optimization."
         ]
     },
     "links":{
         "email":"audit@jvishnuca.in",
         "twitter":{"userid":"@ca_jvishnu","link":"https://twitter.com/ca_jvishnu"},
         "linkedIn":"https://www.linkedin.com/in/ca-vishnu-sanker-44584b140/",
-        "phone":["0422-4952586","+91 96593 79621"],
+        "phone":["0422-4952586","+91 81220 19830"],
         "address":{
             "text":"1st Floor, 23-4, Sambandam Rd East, R.S. Puram, Coimbatore, Tamil Nadu 641002",
-            "link":"https://www.google.com/maps/place/J+VISHNU+%26+ASSOCIATES+-+Chartered+Accountants/@11.0088447,76.95156,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba8599556793d77:0x9433556b3e79fd70!8m2!3d11.0088447!4d76.9537487?hl=en-US"        
+            "link":"https://maps.app.goo.gl/uyLCHUX3Jcy56Af66"        
         }
     },
     "contactUS":{
         "title":"Get in touch",
-        "name":"J Vishnu & Associates",
+        "name":"A Jayachandran & Associates",
         "form":{
             "title":"Leave us a message",
             "button":["Submit","Submitting","Submitted"]

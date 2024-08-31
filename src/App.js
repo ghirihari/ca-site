@@ -1,57 +1,66 @@
-import React from 'react'
-import './Styles.css';
+import React from "react";
+import "./Styles.css";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/header/navBar";
 import InfoBar from "./components/header/infoBar";
-import Home from './components/pages/home/home';
-import About from './components/pages/about/about';
+import Home from "./components/pages/home/home";
+import About from "./components/pages/about/about";
 // import Faq from './components/pages/faq/faq';
-import Blog from './components/pages/blog/Blog';
+import Blog from "./components/pages/blog/Blog";
 // import Careers from './components/pages/careers/careers';
-import Contact from './components/pages/contact/contact';
-import Services from './components/pages/services/services'
-import Footer from './components/footer/footer'
-import TitleRoute from './components/common/RouteTitle';
+import Contact from "./components/pages/contact/contact";
+import Services from "./components/pages/services/services";
+import Footer from "./components/footer/footer";
+import TitleRoute from "./components/common/RouteTitle";
 
-class App extends React.Component{
-  constructor(){
+class App extends React.Component {
+  constructor() {
     super();
     this.state = {
-      data:null
-    }
+      data: null,
+    };
   }
-  getData = async() => {
-    const res = await fetch('constants.json');
+  getData = async () => {
+    const res = await fetch("constants.json");
     const data = await res.json();
-    this.setState({data:data})
-  }
+    this.setState({ data: data });
+  };
 
-  componentDidMount=()=>{
+  componentDidMount = () => {
     this.getData();
-  }
-  
-  render(){
-    console.log(this.state.data)
+  };
+
+  render() {
     return (
       <>
-        {this.state.data 
-          ?
+        {this.state.data ? (
           <div className="App">
-            <InfoBar link={this.state.data.links}/>
-            <NavBar navigation={this.state.data.navigation}/>
-            <TitleRoute navigation={this.state.data.navigation}/>
+            {/* <InfoBar link={this.state.data.links} data={this.state.data.home} /> */}
+            <NavBar
+              navigation={this.state.data.navigation}
+              link={this.state.data.links}
+              data={this.state.data.home}
+            />
+            <TitleRoute navigation={this.state.data.navigation} />
             <Routes>
-              <Route path="/" element={<Home data={this.state.data.home} services={this.state.data.services}/>} />
-              <Route path="about" element={<About aboutData={this.state.data.about} links={this.state.data.links}/>} />
-              <Route path="services" element={<Services servicesData={this.state.data.services}/>} />
-              <Route path="blog" element={<Blog />} />
-              <Route path="contact" element={<Contact links={this.state.data.links} data={this.state.data.contactUS}/>} />
+              <Route
+                path="/"
+                element={
+                  <Home
+                    data={this.state.data}
+                    services={this.state.data.services}
+                  />
+                }
+              />
             </Routes>
-            <Footer navigation={this.state.data.navigation} links={this.state.data.links}/>
+            <Footer
+              navigation={this.state.data.navigation}
+              links={this.state.data.links}
+            />
           </div>
-          : 
+        ) : (
           <></>
-        }
+        )}
       </>
     );
   }

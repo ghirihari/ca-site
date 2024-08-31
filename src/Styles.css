@@ -1,11 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root{
     --textColor:#252525;
     --white:#f2f2f2;
-    --blue:#0f204b;
-    --yellow:#fcb117;
+    --blue:#175888;
+    --yellow:#52b947;
     --titleFont:'Montserrat', sans-serif;
+}
+
+@media (max-width:766px){
+    .expirienceSection{
+        .col {
+            width: 50%;
+        }
+        .cardText{
+            font-size: 18px;
+        }
+    }
+    .founderContainer img{
+        width: 150px !important;
+        height: 200px !important;
+    }
+    .carousel-container{
+        margin-top: 62px;
+    }
+    .carousel-caption-title {
+        font-size: 24px !important;
+    }
+    .carousel-caption{ 
+        top:25% !important
+    }
+}
+
+
+.btn-accent {
+    background-color: var(--yellow);
+    color: var(--white);
+    svg {
+       color: white; 
+    }
+}
+
+.btn-accent:hover {
+    background-color: var(--yellow);
+    color: var(--white);
 }
 
 a {
@@ -27,11 +66,12 @@ body {
     background-color: var(--blue);
     display: flex;
     justify-content: flex-end;
-    padding: 8px;
+    height: 40px;
+    align-items: center;
 }
 
 .infoBarLabel {
-    color: var(--white);
+    color: var(--blue);
     max-width: 0;
     -webkit-transition: max-width 0.7s;
     transition: max-width 0.7s;
@@ -43,35 +83,36 @@ body {
     cursor: pointer;
 }
 
+.InfoBarText{
+    align-self: center;
+    color: var(--yellow);
+    flex-grow: 1;
+    text-align: center;
+
+}
+
 .infoBarItem{
-    color: white;
+    color: var(--blue);
     display: flex;
     flex-direction: row;
-    margin-right: 15px;
     align-items: center;
-    /* padding: 2px 4px; */
     border-radius: 10px;
-    height: 40px;
+    height: 30px;
     cursor: pointer;
 }
 
 .icon{
-    width: 20px;
+    width: 18px;
     height: auto;
-    margin: 0px 5px;
-    margin-right: 4px;
-    color: var(--yellow);
+    margin: 4px 10px;
+    color: var(--blue);
 }
 
 .infoBarItem:hover{
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.1);
 }
 .infoBarItem:hover .infoBarLabel{
     max-width: 9.5rem;
-}
-
-.carousel-inner{
-    height: 500px;
 }
 
 .carousel-item{
@@ -87,7 +128,8 @@ body {
 }
 
 .carousel-caption-title{
-    color: var(--blue);
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
     font-size: 40px;
     font-weight: 900;
 }
@@ -115,7 +157,7 @@ body {
     display: flex;
     padding: 20px;
     align-items: center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     justify-content: center;
 }
 
@@ -135,18 +177,19 @@ body {
 .buttonText{
     font-family: var(--titleFont);
     font-weight: bold;
+    margin-left: 8px;
 }
 .expContainer{
     margin: 50px 0px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .subtitle{
-    font-size: 45px;
-    line-height: 60px;
+    font-family: var(--titleFont);
+    font-weight: 600;
+    font-size: 36px;
     color: var(--blue);
 }
 
@@ -157,4 +200,32 @@ body {
 .imageCard img{
     height: 100%;
     object-fit: cover;
+}
+
+.playFair{
+    font-family: var(--titleFont);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.bolderText {
+    font-weight: 600;
+}
+
+.cardStyles {
+    padding: 8px 24px;
+    background: var(--blue);
+    color: #fff;
+    border: solid 1px rgba(0,0,0,0.2);
+    height: 250px;
+    border-Radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transform: scale(0.97);
+    transition: all 0.15s ease-in-out;
+}
+
+.cardStyles:hover {
+    transform: scale(1);
+    box-shadow: 8px 8px 15px 1px #aaa;
 }

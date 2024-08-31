@@ -2,4 +2,19 @@
     width:auto;
     display:flex;
     align-items: center;
+    
+}
+.fixLink {
+    width:auto;
+    display:flex;
+    align-items: center;
+    color: var(--blue);
+    margin-left: 24px;
+}
+.fixLink:hover {
+    color: var(--yellow);
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 4px !important;
+    text-decoration-color: var(--yellow) !important;
 }

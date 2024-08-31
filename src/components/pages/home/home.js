@@ -1,22 +1,23 @@
-import React from 'react'
+import React from "react";
 import Carousel from "./carousel";
-import Content from './content';
-import Banner from './banner';
-import './home.css'
+import Content from "./content";
+import Banner from "./banner";
+import "./home.css";
 
-const Home = ({data, services}) => {
+const Home = ({ data, services }) => {
   return (
     <div>
-      <Carousel data={data.carousel}/>
-      <Banner bannerData={data.banner}/>
-      <Content 
-        introContent={data.introContent} 
-        sectorData={data.sectorData} 
-        subtitles={data.subtitles}
+      <Carousel data={data.home.carousel} />
+      {/* <Banner bannerData={data.home.banner} /> */}
+      <Content
+        data={data}
+        introContent={data.home.introContent}
+        sectorData={data.home.sectorData}
+        subtitles={data.home.subtitles}
         services={services}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
