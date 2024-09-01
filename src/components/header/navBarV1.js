@@ -3,9 +3,8 @@ import "./navbar.css";
 import { useLocation } from "react-router-dom";
 import Logo from "../../assets/JVSLogo.png";
 import InfoBar from "./infoBar";
-import { Box, IconButton, Menu, Typography } from "@mui/material";
+import { Box, IconButton, Menu } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 
 const NavBarContent = (props) => {
   const location = useLocation();
@@ -20,21 +19,13 @@ const NavBarContent = (props) => {
   };
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   const NavButtons = ({ isMenu = true }) => {

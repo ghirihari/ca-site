@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "./carousel";
 import Content from "./content";
-import Banner from "./banner";
 import "./home.css";
 
 const Home = ({ data, services }) => {

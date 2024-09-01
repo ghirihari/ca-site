@@ -4,7 +4,6 @@ import Toolbar from "@mui/material/Toolbar";
 import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import NavBarContent from "./navBarV1";
-import { Container } from "@mui/material";
 
 function ElevationScroll(props) {
   const { children, window } = props;
