@@ -7,8 +7,6 @@ import { Box, IconButton, Menu } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBarContent = (props) => {
-  const location = useLocation();
-
   const scrollToSection = (id) => {
     const ID = id === "/" ? "carouselExampleCaptions" : id;
     console.log(ID);

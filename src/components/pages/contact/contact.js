@@ -4,7 +4,6 @@ import { ImLocation2 } from "react-icons/im";
 import { GiRotaryPhone } from "react-icons/gi";
 import { IoIosMail } from "react-icons/io";
 import { SiLinkedin, SiTwitter } from "react-icons/si";
-import ContactUs from "../../../assets/contact.png";
 
 const IconContainer = ({ Icon, label, value }) => {
   return (
