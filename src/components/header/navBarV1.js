@@ -1,6 +1,6 @@
 import React from "react";
 import "./navbar.css";
-import { useLocation } from "react-router-dom";
+
 import Logo from "../../assets/JVSLogo.png";
 import InfoBar from "./infoBar";
 import { Box, IconButton, Menu } from "@mui/material";
