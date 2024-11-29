@@ -130,7 +130,7 @@ const InfoBar = ({ link, data, scrollToSection }) => {
         marginRight: -24,
       }}
     >
-      {items.map((item, index) => (
+      {/* {items.map((item, index) => (
         <div className="infoBarItem" key={index}>
           {item.icon}
           <label className="infoBarLabel">{item.label}</label>
@@ -148,7 +148,7 @@ const InfoBar = ({ link, data, scrollToSection }) => {
             {item.text && <label className="infoBarLabel">{item.text}</label>}
           </div>
         </a>
-      ))}
+      ))} */}
       <button
         className="btn btn-accent buttonText"
         onClick={() => scrollToSection("contactSection")}

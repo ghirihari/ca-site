@@ -6,7 +6,7 @@ import "./home.css";
 const Home = ({ data, services }) => {
   return (
     <div>
-      <Carousel data={data.home.carousel} />
+      {/* <Carousel data={data.home.carousel} /> */}
       {/* <Banner bannerData={data.home.banner} /> */}
       <Content
         data={data}

@@ -32,10 +32,7 @@ const NavBarContent = (props) => {
     return (
       <>
         {props.navigation.map((item, index) => {
-          const classes =
-            location.pathname === item.link
-              ? "nav-item nav-item-current"
-              : "nav-item";
+          const classes = "nav-item";
           return (
             <div
               className={isMenu ? classes : "navPopup"}
@@ -53,19 +50,21 @@ const NavBarContent = (props) => {
 
   return (
     <div className="navContainer">
-      <a className="navbar-brand" href="/">
-        <img src={Logo} alt="Logo" style={{ width: "280px", height: "42px" }} />
+      <a className="navbar-brand" href="/" style={{ width: "300px" }}>
+        <img src={Logo} alt="Logo" style={{ height: "32px" }} />
       </a>
-      <div>
-        <Box
-          id="headerItems"
-          className="navbar-headerItem"
-          sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
-        >
-          <NavButtons />
-        </Box>
-      </div>
-      <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+      <Box
+        id="headerItems"
+        className="navbar-headerItem"
+        sx={{
+          flexGrow: 1,
+          display: { xs: "none", md: "flex" },
+          justifyContent: "center",
+        }}
+      >
+        <NavButtons />
+      </Box>
+      <Box sx={{ display: { xs: "none", md: "flex" } }}>
         <InfoBar
           data={props.data}
           link={props.link}

@@ -9,19 +9,6 @@ import Image2 from "../../../assets/founder2.jpeg";
 // Styles
 import "./about.css";
 
-const Intro = ({ data }) => {
-  return (
-    <div
-      className="contentContainer contentText"
-      style={{ paddingBottom: "0px", textAlign: "justify", fontSize: "18px" }}
-    >
-      {data.map((item, index) => (
-        <p key={index}>{item}</p>
-      ))}
-    </div>
-  );
-};
-
 const CoreValues = ({ title, data }) => {
   return (
     <div className="expContainer">
@@ -40,31 +27,9 @@ const CoreValues = ({ title, data }) => {
   );
 };
 
-const OurMission = ({ title, data }) => {
-  return (
-    <div className="bannerBG">
-      <div className="banner blueOverlay" style={{ padding: "50px 0px" }}>
-        <div className="container">
-          <div className="contentTitle" style={{ alignItems: "start" }}>
-            <label className="AboutBannerTitle">{title}</label>
-            <hr className="line" />
-          </div>
-          <ul className="missionsList">
-            {data.map((item, index) => (
-              <li key={index} style={{ marginTop: "10px" }}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const Founders = ({ name, designation, linkData, picture }) => {
   return (
-    <div>
+    <div className="founderFrame">
       <div>
         <img src={picture} alt="Founder" />
       </div>
@@ -129,15 +94,11 @@ const About = ({ aboutData, links }) => {
   return (
     <>
       <div className="container">
-        <Intro data={aboutData.content} />
-      </div>
-      <div className="container">
         <CoreValues
           data={aboutData.coreValues}
           title={aboutData.subtitles[0]}
         />
       </div>
-      <OurMission title={aboutData.subtitles[1]} data={aboutData.missions} />
     </>
   );
 };

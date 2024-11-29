@@ -17,17 +17,20 @@
     flex-direction:column;
     text-align:left;
     padding: 16px;
+    gap: 16px;
+    font-family: var(--titleFont);
 }
 
 .contactCard > div{
     display:flex;
     align-items: center;
     margin-top: 15px;
+ 
 }
 
 .contactCard > div svg{
     margin-right: 10px;
-    fill:var(--yellow);
+    fill:var(--bgV2);
 }
 
 .locationLink:hover{

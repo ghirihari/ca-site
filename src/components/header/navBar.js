@@ -21,13 +21,11 @@ function ElevationScroll(props) {
     sx: trigger
       ? {
           ...children.props.sx,
-          background: "#fff",
-          backdropFilter: "blur(50px)",
+          background: "var(--bgV2)",
         }
       : {
           ...children.props.sx,
           background: "transparent",
-          backdropFilter: "blur(10px)",
         },
   });
 }

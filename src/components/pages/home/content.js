@@ -29,7 +29,7 @@ const Sectors = ({ title, sectorData }) => {
         </label>
         <hr className="line" />
       </div>
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-3">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2 mb-3">
         {data.map((item, index) => (
           <div className="col" key={index}>
             <div className="card sectorCard">
@@ -60,20 +60,65 @@ const ServiceContainer = ({ data }) => (
     </div>
   </div>
 );
+
+const OurMission = ({ title, data }) => {
+  return (
+    <div className="bannerBG">
+      <div className="banner blueOverlay" style={{ padding: "50px 0px" }}>
+        <div className="container">
+          <div className="contentTitle" style={{ alignItems: "start" }}>
+            <label className="AboutBannerTitle">{title}</label>
+            <hr className="line" />
+          </div>
+          <ul className="missionsList">
+            {data.map((item, index) => (
+              <li key={index} style={{ marginTop: "10px" }}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Intro = ({ data }) => {
+  return (
+    <div className="bannerIntro">
+      <div className="banner">
+        <div className="container" style={{ marginTop: 64 }}>
+          <div
+            className="contentContainer contentText"
+            style={{
+              paddingBottom: "0px",
+              textAlign: "justify",
+              fontSize: "18px",
+              height: "500px",
+            }}
+          >
+            {data.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Content = ({ data, introContent, sectorData, subtitles, services }) => {
-  console.log(777, data);
   return (
     <div>
+      <Intro data={data.about.content} />
       <div id="aboutSection">
         <About aboutData={data.about} links={data.links} />
       </div>
-      <div className="container">
-        <OurFounder
-          title={data.about.subtitles[2]}
-          data={data.about.founder}
-          links={data.links}
-        />
+      <OurMission title={data.about.subtitles[1]} data={data.about.missions} />
+      <div className="container" id="servicesSection">
+        <ServiceContainer data={data} />
       </div>
+
       <div className="bannerBG">
         <div className="banner blueOverlay">
           <div className="container expirienceSection">
@@ -81,9 +126,15 @@ const Content = ({ data, introContent, sectorData, subtitles, services }) => {
           </div>
         </div>
       </div>
-      <div className="container" id="servicesSection">
-        <ServiceContainer data={data} />
+
+      <div className="container">
+        <OurFounder
+          title={data.about.subtitles[2]}
+          data={data.about.founder}
+          links={data.links}
+        />
       </div>
+
       <div id="contactSection">
         <Contact
           links={data.links}
