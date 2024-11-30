@@ -1,8 +1,57 @@
 import React from "react";
 import "./contact.css";
-import { ImLocation2 } from "react-icons/im";
-import { GiRotaryPhone } from "react-icons/gi";
-import { IoIosMail } from "react-icons/io";
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { MdAddCall } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
+
+const NewTabLink = ({ link, text }) => {
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={link}
+      className="locationLink"
+    >
+      {text}
+    </a>
+  );
+};
+
+const IconContainer = ({ Icon, label, value }) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        gap: 8,
+      }}
+    >
+      <div
+        style={{
+          background: "var(--blue)",
+          width: "56px",
+          height: "56px",
+          padding: "12px",
+          borderRadius: "12px",
+        }}
+      >
+        {Icon}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          fontFamily: "var(--titleFont)",
+        }}
+      >
+        <span style={{ fontWeight: 600 }}>{label}</span>
+        <span style={{ fontSize: "14px", maxWidth: "300px", color: "#1f1f1f" }}>
+          {value}
+        </span>
+      </div>
+    </div>
+  );
+};
 
 const Contact = ({ links, data, aboutData }) => {
   console.log(data, links);
@@ -20,30 +69,46 @@ const Contact = ({ links, data, aboutData }) => {
         style={{ display: "flex", alignItems: "center" }}
       >
         <div className="contactCard">
-          <h1>{data.name}</h1>
           <div>
-            <ImLocation2 size={32} style={{ minWidth: "32px" }} />
-            <div>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={address.link}
-                className="locationLink"
-              >
-                {address.text}
-              </a>
-            </div>
+            <IconContainer
+              Icon={<FaMapMarkedAlt size={32} />}
+              label={"Location"}
+              value={<NewTabLink link={address.link} text={address.text} />}
+            />
           </div>
           <div>
-            <IoIosMail size={32} />
-            <label>{links.email}</label>
+            <IconContainer
+              Icon={<MdEmail size={32} />}
+              label={"Email ID"}
+              value={links.email}
+            />
           </div>
           <div>
-            <GiRotaryPhone size={32} />
-            <label>
-              {links.phone[0]} / {links.phone[1]}
-            </label>
+            <IconContainer
+              Icon={<MdAddCall size={32} />}
+              label={"Phone Number"}
+              value={`${links.phone[0]} / ${links.phone[1]}`}
+            />
           </div>
+          {/* <div>
+            <IconContainer
+              Icon={<SiLinkedin size={32} />}
+              label={"LinkedIn"}
+              value={<NewTabLink link={links.linkedIn} text={links.linkedIn} />}
+            />
+          </div>
+          <div>
+            <IconContainer
+              Icon={<SiTwitter size={32} />}
+              label={"X"}
+              value={
+                <NewTabLink
+                  link={links.twitter.link}
+                  text={links.twitter.userid}
+                />
+              }
+            />
+          </div> */}
         </div>
       </div>
       <div className="container">
@@ -54,30 +119,50 @@ const Contact = ({ links, data, aboutData }) => {
               style={{ display: "flex", alignItems: "center" }}
             >
               <div className="contactCard">
-                <h2>{data.name}</h2>
                 <div>
-                  <ImLocation2 size={32} />
-                  <div>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={address.link}
-                      className="locationLink"
-                    >
-                      {address.text}
-                    </a>
-                  </div>
+                  <IconContainer
+                    Icon={<FaMapMarkedAlt size={32} />}
+                    label={"Location"}
+                    value={
+                      <NewTabLink link={address.link} text={address.text} />
+                    }
+                  />
                 </div>
                 <div>
-                  <IoIosMail size={32} />
-                  <label>{links.email}</label>
+                  <IconContainer
+                    Icon={<MdEmail size={32} />}
+                    label={"Email ID"}
+                    value={links.email}
+                  />
                 </div>
                 <div>
-                  <GiRotaryPhone size={32} />
-                  <label>
-                    {links.phone[0]} / {links.phone[1]}
-                  </label>
+                  <IconContainer
+                    Icon={<MdAddCall size={32} />}
+                    label={"Phone Number"}
+                    value={`${links.phone[0]} / ${links.phone[1]}`}
+                  />
                 </div>
+                {/* <div>
+                  <IconContainer
+                    Icon={<SiLinkedin size={32} />}
+                    label={"LinkedIn"}
+                    value={
+                      <NewTabLink link={links.linkedIn} text={links.linkedIn} />
+                    }
+                  />
+                </div>
+                <div>
+                  <IconContainer
+                    Icon={<SiTwitter size={32} />}
+                    label={"X"}
+                    value={
+                      <NewTabLink
+                        link={links.twitter.link}
+                        text={links.twitter.userid}
+                      />
+                    }
+                  />
+                </div> */}
               </div>
             </div>
           </div>

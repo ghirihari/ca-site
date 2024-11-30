@@ -1,18 +1,19 @@
 import React from "react";
 
 import "./footer.css";
-import { SiLinkedin, SiTwitter } from "react-icons/si";
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { MdAddCall } from "react-icons/md";
 
 const Footer = ({ navigation, links }) => {
   console.log(links);
   const linkData = [
     {
-      icon: <SiTwitter size="24px" />,
-      link: links.twitter.link,
+      icon: <FaMapMarkedAlt size="24px" />,
+      link: links.address.link,
     },
     {
-      icon: <SiLinkedin size="24px" />,
-      link: links.linkedIn,
+      icon: <MdAddCall size="24px" />,
+      link: "tel:+91-8122019830",
     },
   ];
   return (
@@ -34,7 +35,9 @@ const Footer = ({ navigation, links }) => {
               ))}
             </div>
 
-            <label className="footerTitle m-3">JVishnuCA.in</label>
+            <label className="footerTitle m-3">
+              A Jayachandran & Associates
+            </label>
             <label className="">{links.address.text}</label>
           </div>
         </div>

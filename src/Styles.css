@@ -7,6 +7,7 @@
     --blue:#175888;
     --yellow:#52b947;
     --titleFont:'Montserrat', sans-serif;
+    --bgV2: #f8f6f2
 }
 
 @media (max-width:766px){
@@ -58,7 +59,7 @@ a:hover {
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--bgV2) !important;
     font-family: var(--titleFont)
 }
 
@@ -175,6 +176,7 @@ body {
 }
 
 .buttonText{
+    font-size: 13px;
     font-family: var(--titleFont);
     font-weight: bold;
     margin-left: 8px;

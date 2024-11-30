@@ -18,3 +18,31 @@
     text-underline-offset: 4px !important;
     text-decoration-color: var(--yellow) !important;
 }
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .banner-image.visible {
+    opacity: 1;
+    z-index: 1; /* Bring the visible image to the front */
+  }
+  
+  .banner-image.hidden {
+    opacity: 0;
+    z-index: 0;
+  }
+  

@@ -20,6 +20,7 @@
     text-align: center;
     margin: 0px;
     font-family: var(--titleFont);
+    line-height: 34px;
 }
 
 .serviceContainer{
@@ -56,6 +57,7 @@
     transform: scale(0.95);
     transition: all 0.15s ease-in-out;
     border: none;
+    padding: 8px;
 }
 
 .sectorCard:hover{
@@ -81,6 +83,7 @@
 }
 
 .cardText{
+    font-size: 18px;
     padding: 10px;
     flex-grow: 1;
     display: flex;

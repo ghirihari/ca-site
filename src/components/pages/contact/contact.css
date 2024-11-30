@@ -27,7 +27,7 @@
 
 .contactCard > div svg{
     margin-right: 10px;
-    fill:var(--yellow);
+    fill:var(--white);
 }
 
 .locationLink:hover{

@@ -27,7 +27,7 @@ function ElevationScroll(props) {
       : {
           ...children.props.sx,
           background: "transparent",
-          backdropFilter: "blur(10px)",
+          backdropFilter: "blur(0px)",
         },
   });
 }

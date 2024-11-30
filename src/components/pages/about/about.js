@@ -64,7 +64,7 @@ const OurMission = ({ title, data }) => {
 
 const Founders = ({ name, designation, linkData, picture }) => {
   return (
-    <div>
+    <div className="founderFrame">
       <div>
         <img src={picture} alt="Founder" />
       </div>
