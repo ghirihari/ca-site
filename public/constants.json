@@ -1,6 +1,6 @@
 {
     "navigation": [
-        {"text":"Home", "link":"/"},
+        {"text":"Home", "link":"homeSection"},
         {"text":"About us", "link":"aboutSection"},
         {"text":"Services", "link":"servicesSection"},
         {"text":"Contact Us", "link":"contactSection"}

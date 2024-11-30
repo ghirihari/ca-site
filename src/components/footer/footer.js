@@ -5,7 +5,6 @@ import { FaMapMarkedAlt } from "react-icons/fa";
 import { MdAddCall } from "react-icons/md";
 
 const Footer = ({ navigation, links }) => {
-  console.log(links);
   const linkData = [
     {
       icon: <FaMapMarkedAlt size="24px" />,

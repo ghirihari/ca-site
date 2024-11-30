@@ -1,3 +1,13 @@
+@media (max-width:766px){
+    .slideLabel {
+        font-family: var(--titleFont);
+        font-weight: 600;
+        font-size: 20px !important;
+        color: white;
+        text-shadow: 2px 2px 8px #000;
+      }
+}
+
 .fixButton {
     width:auto;
     display:flex;
@@ -46,3 +56,10 @@
     z-index: 0;
   }
   
+  .slideLabel {
+    font-family: var(--titleFont);
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 8px #000;
+  }

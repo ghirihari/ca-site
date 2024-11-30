@@ -5,16 +5,16 @@ import InfoBar from "./infoBar";
 import { Box, IconButton, Menu } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const NavBarContent = (props) => {
-  const scrollToSection = (id) => {
-    const ID = id === "/" ? "carouselExampleCaptions" : id;
-    console.log(ID);
-    const element = document.getElementById(ID);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+export const scrollToSection = (id) => {
+  const ID = id === "/" ? "carouselExampleCaptions" : id;
 
+  const element = document.getElementById(ID);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+const NavBarContent = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {

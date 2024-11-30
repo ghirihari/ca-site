@@ -61,7 +61,6 @@ const ServiceContainer = ({ data }) => (
   </div>
 );
 const Content = ({ data, introContent, sectorData, subtitles, services }) => {
-  console.log(777, data);
   return (
     <div>
       <div id="aboutSection">

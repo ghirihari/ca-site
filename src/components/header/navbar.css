@@ -81,6 +81,7 @@
     font-family: var(--titleFont);
     font-weight: 600;
     color: #123e5f;
+    cursor: pointer;
 }
 
 .nav-item:hover{

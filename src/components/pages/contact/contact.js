@@ -54,8 +54,6 @@ const IconContainer = ({ Icon, label, value }) => {
 };
 
 const Contact = ({ links, data, aboutData }) => {
-  console.log(data, links);
-
   const address = links.address;
   return (
     <div className="expContainer" style={{ margin: "0px" }}>
