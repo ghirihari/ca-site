@@ -78,8 +78,9 @@
 
 .missionsList{
     color: white;
-    font-size: larger;
-    line-height: 50px;
+    font-family: 'Montserrat', sans-serif !important;
+    line-height: 34px;
+    font-size: 18px;
     font-weight: 400;
 }
 
@@ -130,8 +131,9 @@
 }
 
 .coreList{
-    font-size: larger;
-    line-height: 50px;
+    font-family: 'Montserrat', sans-serif !important;
+    line-height: 34px;
+    font-size: 18px;
     font-weight: 400;
     text-align: left;
 }

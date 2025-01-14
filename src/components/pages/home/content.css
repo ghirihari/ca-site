@@ -23,7 +23,7 @@
     font-size: 24px;
     text-align: center;
     margin: 0px;
-    font-family: var(--titleFont);
+    font-family: 'Montserrat', sans-serif !important;
     line-height: 34px;
 }
 
@@ -87,6 +87,7 @@
 }
 
 .cardText{
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     padding: 10px;
     flex-grow: 1;

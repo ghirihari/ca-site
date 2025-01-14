@@ -16,7 +16,7 @@
             width: 50%;
         }
         .cardText{
-            font-size: 18px;
+            font-size: 16px;
         }
     }
     .founderContainer img{
@@ -60,7 +60,7 @@ a:hover {
 
 body {
     background-color: var(--bgV2) !important;
-    font-family: var(--titleFont)
+    font-family: var(--titleFont);
 }
 
 .titleInfoBar{
@@ -162,6 +162,10 @@ body {
     justify-content: center;
 }
 
+.exp {
+    padding: 0;
+}
+
 .banner label{
     font-family: var(--titleFont);
     font-weight: 600;
@@ -186,6 +190,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .subtitle {
+        text-align: center;
+    }
 }
 
 .subtitle{
@@ -211,6 +218,10 @@ body {
     font-style: normal;
 }
 
+.textSub{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .bolderText {
     font-weight: 600;
 }
@@ -220,7 +231,7 @@ body {
     background: var(--blue);
     color: #fff;
     border: solid 1px rgba(0,0,0,0.2);
-    height: 250px;
+    height: auto;
     border-Radius: 5px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     transform: scale(0.97);

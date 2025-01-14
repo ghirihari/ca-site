@@ -74,7 +74,7 @@ const Content = ({ data, introContent, sectorData, subtitles, services }) => {
         />
       </div>
       <div className="bannerBG">
-        <div className="banner blueOverlay">
+        <div className="banner blueOverlay exp">
           <div className="container expirienceSection">
             <Sectors title={subtitles[1]} sectorData={sectorData} />
           </div>

@@ -31,6 +31,7 @@ const Card = ({ item, index }) => {
             {item.captionTitle}
           </h3>
           <div
+            className="textSub"
             style={{
               color: "#fafafa",
             }}

@@ -13,7 +13,7 @@ const Intro = ({ data }) => {
   return (
     <div
       className="contentContainer contentText"
-      style={{ paddingBottom: "0px", textAlign: "justify", fontSize: "18px" }}
+      style={{ paddingBottom: "0px", fontSize: "18px" }}
     >
       {data.map((item, index) => (
         <p key={index}>{item}</p>
