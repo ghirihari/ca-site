@@ -33,6 +33,7 @@ const ImageTransition = () => {
   return (
     <div className="banner-container" style={{ display: "flex" }}>
       <img
+        className="imageSlides"
         src={Image1}
         alt={`Banner`}
         style={{
@@ -41,14 +42,8 @@ const ImageTransition = () => {
       />
       <>
         <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "70%",
-            transform: "translate(-50%, -50%)",
-            opacity: currentCaptionIndex === 0 ? 1 : 0,
-            transition: "all 0.5s",
-          }}
+          className="slideImage"
+          style={{ opacity: currentCaptionIndex === 0 ? 1 : 0 }}
         >
           <label className="slideLabel">{Captions[0].title}</label>
           <div>
@@ -61,14 +56,8 @@ const ImageTransition = () => {
           </div>
         </div>
         <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "70%",
-            transform: "translate(-50%, -50%)",
-            opacity: currentCaptionIndex === 1 ? 1 : 0,
-            transition: "all 0.5s ",
-          }}
+          className="slideImage"
+          style={{ opacity: currentCaptionIndex === 1 ? 1 : 0 }}
         >
           <label className="slideLabel">{Captions[1].title}</label>
           <div>

@@ -19,6 +19,9 @@
     .navPopup {
         padding: 8px;
     }
+    .navbarLogo {
+        height: 40px !important
+    }
 }
 
 .navbar{
@@ -122,4 +125,7 @@
 .navbar-toggler-icon{
     display: block;
     width: 30px;
+}
+.navbarLogo {
+    height: 45px
 }

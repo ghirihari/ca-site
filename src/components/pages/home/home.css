@@ -6,6 +6,15 @@
         color: white;
         text-shadow: 2px 2px 8px #000;
       }
+      .imageSlides {
+        height: 400px;
+        object-fit: cover;
+      }
+      .slideImage{ 
+        left: 50% !important;
+        width: 300px;
+        text-align: center;
+      }
 }
 
 .fixButton {
@@ -62,4 +71,14 @@
     font-size: 50px;
     color: white;
     text-shadow: 2px 2px 8px #000;
+  }
+  .slideImage {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    button {
+      margin-top: 10px;
+      font-size: 15px;
+    }
   }

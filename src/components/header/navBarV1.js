@@ -53,7 +53,7 @@ const NavBarContent = (props) => {
   return (
     <div className="navContainer">
       <a className="navbar-brand" href="/" style={{ width: "250px" }}>
-        <img src={Logo} alt="Logo" style={{ height: "45px" }} />
+        <img className="navbarLogo" src={Logo} alt="Logo" />
       </a>
       <Box
         id="headerItems"
