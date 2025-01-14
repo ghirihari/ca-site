@@ -62,7 +62,7 @@ const ServiceContainer = ({ data }) => (
 );
 const Content = ({ data, introContent, sectorData, subtitles, services }) => {
   return (
-    <div>
+    <div style={{ marginTop: "50px" }}>
       <div id="aboutSection">
         <About aboutData={data.about} links={data.links} />
       </div>

@@ -6,11 +6,16 @@ import { Box, IconButton, Menu } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 export const scrollToSection = (id) => {
+  let offset = id === "aboutSection" ? 80 : 20;
   const ID = id === "/" ? "carouselExampleCaptions" : id;
 
   const element = document.getElementById(ID);
   if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
+    const topPosition =
+      element.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: topPosition, behavior: "smooth" });
+  } else {
+    console.warn("Element not found:", ID);
   }
 };
 
@@ -47,8 +52,8 @@ const NavBarContent = (props) => {
 
   return (
     <div className="navContainer">
-      <a className="navbar-brand" href="/">
-        <img src={Logo} alt="Logo" style={{ height: "32px" }} />
+      <a className="navbar-brand" href="/" style={{ width: "250px" }}>
+        <img src={Logo} alt="Logo" style={{ height: "45px" }} />
       </a>
       <Box
         id="headerItems"

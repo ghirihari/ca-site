@@ -1,6 +1,10 @@
 @media (max-width:766px){
     .contentText{
         font-size: 18px !important;
+        p:not(:nth-of-type(1)) {
+            color: blue;
+            display: none;
+        }
     }
     .serviceContainer{
         padding-top: 50px !important;
@@ -12,7 +16,7 @@
 }
 
 .contentContainer{
-    padding: 50px 0px 0px 0px;
+    padding: 0
 }
 
 .contentText{
